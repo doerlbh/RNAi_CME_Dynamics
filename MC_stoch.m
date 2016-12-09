@@ -4,12 +4,12 @@
 
 clear all; close all
 
-gm1 = 0.05;
-gm2 = 0.1;
-gm3 = 0.06;
-K1 = 0.7;
-K2 = 0.6;
-K3 = 0.8;
+gm1 = 0.005;
+gm2 = 0.01;
+gm3 = 0.006;
+K1 = 1;
+K2 = 0.8;
+K3 = 0.9;
 H = 0.5;
 f = 0.3;
 
@@ -24,7 +24,7 @@ x0 = [0; 0; 0; 0];
 
 rng(1);
 
-Nstep=1500;
+Nstep=50000;
 stptime = zeros(Nstep,1);
 time = zeros(Nstep,1);
 xall = zeros(Nstep,4);
@@ -48,3 +48,10 @@ xlabel('time (s)');
 % plot(1:Nstep,xall(:,1:4),'LineWidth',1.5);
 % legend('x (iRNA)','y (mRNA)','z (mRNA.iRNA.RISC)','w (protein)');
 % xlabel('steps'); 
+
+figure(3)
+plot3(xall(:,1),xall(:,2),xall(:,3),'LineWidth',1.5);
+grid on
+xlabel('iRNA'); 
+ylabel('mRNA'); 
+zlabel('protein'); 
