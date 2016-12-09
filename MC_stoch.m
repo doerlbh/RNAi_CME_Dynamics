@@ -4,12 +4,12 @@
 
 clear all; close all
 
-gm1 = 0.3;
-gm2 = 0.8;
-gm3 = 0.2;
-K1 = 0.3;
-K2 = 0.5;
-K3 = 0.6;
+gm1 = 0.05;
+gm2 = 0.1;
+gm3 = 0.06;
+K1 = 0.7;
+K2 = 0.6;
+K3 = 0.8;
 H = 0.5;
 f = 0.3;
 
@@ -24,7 +24,7 @@ x0 = [0; 0; 0; 0];
 
 rng(1);
 
-Nstep=100;
+Nstep=1500;
 stptime = zeros(Nstep,1);
 time = zeros(Nstep,1);
 xall = zeros(Nstep,4);
