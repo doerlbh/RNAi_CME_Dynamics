@@ -1,0 +1,20 @@
+% RNA interference modeled by Deterministic ODE
+% Author: Baihan Lin
+% Date: Nov 2016
+
+ d
+
+
+function dy = iRNA_ODE(t,y,p)
+ 
+   dy = zeros(7,1);
+   
+   dy(1) = 0;
+   dy(2) = p(1)*y(5) - (p(2) + p(3))*y(2);
+   dy(3) = p(2)*y(2) - p(4)*y(3);
+   dy(4) = p(4)*y(3) - p(5)*y(4);
+   dy(5) = p(6)*y(6) + p(7)*y(7) - p(1)*y(5);
+   dy(6) = p(5)*y(4) - p(6)*y(6);
+   dy(7) = p(3)*y(2) - p(7)*y(7);
+   
+end
