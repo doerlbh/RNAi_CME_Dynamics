@@ -42,7 +42,7 @@ end
 figure(1)
 plot(time,xall(:,1:4),'LineWidth',1.5);
 legend('x (iRNA)','y (mRNA)','z (mRNA.iRNA.RISC)','w (protein)');
-xlabel('time (s)'); 
+xlabel('time (min)'); 
 % 
 % figure(2)
 % plot(1:Nstep,xall(:,1:4),'LineWidth',1.5);
